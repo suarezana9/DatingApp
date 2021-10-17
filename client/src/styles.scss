@@ -5,3 +5,7 @@
 
 /* Importing Datepicker SCSS file. */
 @import "~ngx-bootstrap/datepicker/bs-datepicker";
+
+@import "../node_modules/bootswatch/dist/materia/variables";
+@import "../node_modules/bootswatch/dist/materia/bootswatch";
+@import "../node_modules/bootswatch/dist/materia/bootstrap.min.css";
