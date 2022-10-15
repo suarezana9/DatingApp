@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\Workspaces\\CloudStudio.Apps.Gear"
+		},
+		{
+			"path": "..\\..\\Workspaces\\CloudStudio.Apps.Gear\\Web\\Manager"
+		}
+	],
+	"settings": {}
+}

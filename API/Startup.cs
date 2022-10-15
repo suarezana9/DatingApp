@@ -8,6 +8,7 @@ using API.Extensions;
 using API.interfaces;
 using API.Middleware;
 using API.Services;
+using Microsoft.AspNetCore.Authentication.Certificate;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -40,7 +41,8 @@ namespace API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
             });
-            services.AddCors();
+            services.AddAuthentication(CertificateAuthenticationDefaults.AuthenticationScheme).AddCertificate();
+            services.AddCors(); 
             services.AddIdentityServices(_config);
         }
 
@@ -60,6 +62,7 @@ namespace API
             app.UseRouting();
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
 
+            
             app.UseAuthentication();
             app.UseAuthorization();
 
